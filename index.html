@@ -9,9 +9,14 @@
 </head>
 <body>
 
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+
+    <div id="particles-js"></div>
+
     <nav>
         <div class="nav-container">
-            <a href="#" class="logo">Paurav Joshi.</a>
+            <a href="#" class="logo">Paurav<span class="dot">.</span></a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
@@ -23,16 +28,19 @@
 
     <header class="hero">
         <div class="container">
-            <h1>Hi, I'm <span class="highlight">Paurav Joshi</span>.</h1>
+            <h1 class="glitch" data-text="Paurav Joshi">Paurav Joshi</h1>
             <p class="subtitle" id="typing-text"></p> 
             <p class="location"><i class="fas fa-map-marker-alt"></i> Abercynon | Willing to Relocate</p>
-            <a href="#contact" class="btn">Get in Touch</a>
+            <div class="hero-btns">
+                <a href="#contact" class="btn">Get in Touch</a>
+                <a href="cv.pdf" download class="btn btn-secondary">Download CV <i class="fas fa-download"></i></a>
+            </div>
         </div>
     </header>
 
     <section id="about" class="container section hidden">
         <h2>About Me</h2>
-        <div class="about-content">
+        <div class="about-content glass-panel" data-tilt>
             <p>
                 I am a dedicated and versatile professional currently serving as a Care Manager, with a strong academic background in Information Technology. 
                 My experience combines strategic expertise in <span class="highlight">Financial Management</span>, <span class="highlight">HR Leadership</span>, and <span class="highlight">Compliance</span>.
@@ -48,26 +56,30 @@
         <h2>Work History</h2>
         <div class="project-grid">
             
-            <div class="card">
-                <h3>Care Manager</h3>
-                <span class="date">Oct 2024 - Present</span>
-                <p class="company">Kujali Care Ltd, Bristol</p>
-                <ul class="job-details">
-                    <li>Leading operations, team performance, and clinical support.</li>
-                    <li>Managing Financials, HR Leadership, and Business Growth.</li>
-                    <li>Ensuring CQC Compliance and stakeholder relationships.</li>
-                </ul>
+            <div class="card" data-tilt data-tilt-glare data-tilt-max-glare="0.5">
+                <div class="card-content">
+                    <h3>Care Manager</h3>
+                    <span class="date">Oct 2024 - Present</span>
+                    <p class="company">Kujali Care Ltd, Bristol</p>
+                    <ul class="job-details">
+                        <li>Leading operations, team performance, and clinical support.</li>
+                        <li>Managing Financials, HR Leadership, and Business Growth.</li>
+                        <li>Ensuring CQC Compliance and stakeholder relationships.</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="card">
-                <h3>Quality Assurance Specialist</h3>
-                <span class="date">Aug 2017 - May 2023</span>
-                <p class="company">Kirtan Technology, Ahmedabad</p>
-                <ul class="job-details">
-                    <li>Focused on Quality Control Inspection and Acceptance Sampling.</li>
-                    <li>Collaborated on Lean Six Sigma projects.</li>
-                    <li>Utilized detailed sampling techniques and visual examination.</li>
-                </ul>
+            <div class="card" data-tilt data-tilt-glare data-tilt-max-glare="0.5">
+                <div class="card-content">
+                    <h3>Quality Assurance Specialist</h3>
+                    <span class="date">Aug 2017 - May 2023</span>
+                    <p class="company">Kirtan Technology, Ahmedabad</p>
+                    <ul class="job-details">
+                        <li>Focused on Quality Control Inspection and Acceptance Sampling.</li>
+                        <li>Collaborated on Lean Six Sigma projects.</li>
+                        <li>Utilized detailed sampling techniques and visual examination.</li>
+                    </ul>
+                </div>
             </div>
 
         </div>
@@ -76,12 +88,12 @@
     <section id="education" class="container section hidden">
         <h2>Education</h2>
         <div class="project-grid">
-            <div class="card">
+            <div class="card" data-tilt>
                 <h3>MSc IT Management</h3>
                 <p class="company">Cardiff Metropolitan University</p>
                 <span class="date">Graduating 2025</span>
             </div>
-            <div class="card">
+            <div class="card" data-tilt>
                 <h3>BA Computer Science</h3>
                 <p class="company">APJ Abdul Kalam University</p>
                 <span class="date">2019</span>
@@ -92,7 +104,7 @@
     <section id="skills" class="container section hidden">
         <h2>Skills & Certifications</h2>
         <div class="skills-wrapper">
-            <div class="skill-category">
+            <div class="skill-category glass-panel" data-tilt>
                 <h3>Professional Skills</h3>
                 <ul class="skills-list">
                     <li>Operations Management</li>
@@ -102,7 +114,40 @@
                     <li>Quality Assurance</li>
                 </ul>
             </div>
-            <div class="skill-category">
+            <div class="skill-category glass-panel" data-tilt>
                 <h3>Certifications</h3>
                 <ul class="skills-list">
-                    <li>In
+                    <li>Infection Prevention & Control (L2)</li>
+                    <li>First Aid & Fire Safety</li>
+                    <li>Medication Management</li>
+                    <li>Full Driving License</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container section hidden">
+        <h2>Get In Touch</h2>
+        <p>I am currently open to new opportunities.</p>
+        <div class="contact-info">
+            <a href="mailto:Infopaurav@gmail.com" class="btn"><i class="fas fa-envelope"></i> Infopaurav@gmail.com</a>
+            <p class="phone-number" style="margin-top:20px; color:#8892b0;">+44 7369 293717</p>
+        </div>
+        
+        <div class="socials" style="margin-top: 30px; font-size: 1.5rem;">
+            <a href="https://www.linkedin.com/in/paurav-joshi-b9a334260" target="_blank" class="social-link">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright © 2025 Paurav Joshi</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
