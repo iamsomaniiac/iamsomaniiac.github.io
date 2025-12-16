@@ -8,19 +8,18 @@ window.addEventListener('load', () => {
         setTimeout(() => {
             preloader.style.display = 'none';
         }, 1000);
-    }, 2000); // 2 second fake boot time
+    }, 2000); 
 });
 
-// 2. REAL-TIME CLOCK (For the HUD)
+// 2. REAL-TIME CLOCK
 function updateClock() {
     const now = new Date();
     document.getElementById('clock').innerText = now.toLocaleTimeString();
 }
 setInterval(updateClock, 1000);
 
-// 3. TEXT DECIPHER EFFECT (The "Hacker" Effect)
+// 3. TEXT DECIPHER EFFECT
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-
 document.querySelectorAll("h1, h2, h3").forEach(header => {
     header.onmouseover = event => {
         let iterations = 0;
@@ -34,17 +33,15 @@ document.querySelectorAll("h1, h2, h3").forEach(header => {
                     return letters[Math.floor(Math.random() * 36)];
                 })
                 .join("");
-
             if(iterations >= event.target.dataset.value.length){
                 clearInterval(interval);
             }
-
             iterations += 1 / 3;
         }, 30);
     }
 });
 
-// 4. PARTICLES JS: "WARP SPEED" CONFIG
+// 4. PARTICLES JS
 particlesJS("particles-js", {
   "particles": {
     "number": { "value": 100, "density": { "enable": true, "value_area": 800 } },
@@ -52,11 +49,11 @@ particlesJS("particles-js", {
     "shape": { "type": "circle" },
     "opacity": { "value": 1, "random": true },
     "size": { "value": 2, "random": true },
-    "line_linked": { "enable": false }, /* No lines, just stars */
+    "line_linked": { "enable": false }, 
     "move": { 
         "enable": true, 
-        "speed": 10, /* FAST SPEED */
-        "direction": "bottom", /* Moving down/forward */
+        "speed": 10, 
+        "direction": "bottom", 
         "random": false, 
         "straight": false, 
         "out_mode": "out", 
@@ -74,7 +71,7 @@ particlesJS("particles-js", {
   "retina_detect": true
 });
 
-// 5. 3D TILT INIT
+// 5. 3D TILT
 VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
     max: 15,
     speed: 400,
