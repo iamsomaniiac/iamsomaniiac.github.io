@@ -13,7 +13,7 @@
     <div id="preloader">
         <div class="loader-content">
             <div class="scanner"></div>
-            <p>INITIALIZING QUANTUM CORE...</p>
+            <p>LOADING PERSONNEL FILE: JOSHI_P...</p>
             <div class="loading-bar"><div class="progress"></div></div>
         </div>
     </div>
@@ -23,7 +23,7 @@
 
     <div class="hud-frame">
         <div class="top-bar">
-            <div class="status">SYS: ONLINE</div>
+            <div class="status">SYS: ONLINE // USER: RECRUITER</div>
             <div class="time" id="clock">00:00:00</div>
         </div>
         <div class="side-bar left"></div>
@@ -32,9 +32,11 @@
 
     <nav class="orbital-nav">
         <a href="#hero" class="orbit-btn" data-tooltip="CORE"><i class="fas fa-atom"></i></a>
-        <a href="#about" class="orbit-btn" data-tooltip="DATA"><i class="fas fa-user-astronaut"></i></a>
+        <a href="#about" class="orbit-btn" data-tooltip="PROFILE"><i class="fas fa-id-card-alt"></i></a>
+        <a href="#history" class="orbit-btn" data-tooltip="TIMELINE"><i class="fas fa-history"></i></a>
         <a href="#projects" class="orbit-btn" data-tooltip="LOGS"><i class="fas fa-project-diagram"></i></a>
-        <a href="#contact" class="orbit-btn" data-tooltip="LINK"><i class="fas fa-satellite-dish"></i></a>
+        <a href="#skills" class="orbit-btn" data-tooltip="MATRIX"><i class="fas fa-th"></i></a>
+        <a href="#contact" class="orbit-btn" data-tooltip="UPLINK"><i class="fas fa-satellite-dish"></i></a>
     </nav>
 
     <main>
@@ -50,12 +52,11 @@
                     <div class="line"></div>
                 </div>
                 <p class="mission-brief">
-                    BRIDGING THE GAP BETWEEN <span class="highlight">CLINICAL OPS</span> AND <span class="highlight">DIGITAL ARCHITECTURE</span>.
+                    DEPLOYING <span class="highlight">STRATEGIC COMPLIANCE</span> AND <span class="highlight">DIGITAL ARCHITECTURE</span> TO OPTIMIZE ORGANIZATIONAL PERFORMANCE.
                 </p>
                 <div class="action-module">
                     <a href="#contact" class="cyber-btn">
                         <span class="btn-content">INITIATE_UPLINK</span>
-                        <span class="glitch-effect"></span>
                     </a>
                     <a href="cv.pdf" download class="cyber-btn holo">
                         <span class="btn-content">DOWNLOAD_INTEL</span>
@@ -77,15 +78,60 @@
             </div>
             
             <div class="profile-grid">
-                <div class="hex-frame" data-tilt>
+                <div class="hex-frame large" data-tilt>
                     <div class="hex-content">
                         <h3>LEVEL 7 CLEARANCE</h3>
-                        <p>Currently executing Master's protocols in <b>IT Management</b> while commanding operations at <b>Kujali Care</b>. I specialize in deploying high-level compliance strategies and optimizing human-digital interfaces.</p>
-                        <ul class="stats-list">
-                            <li><span>INTEL:</span> BSc Comp Sci + MSc IT</li>
-                            <li><span>STATUS:</span> Relocatable</li>
-                            <li><span>BASE:</span> Abercynon, UK</li>
-                        </ul>
+                        <p>
+                            Dual-specialist with operational command experience at <b>Kujali Care</b> and technical architecture knowledge from <b>MSc IT Management</b> studies. 
+                            <br><br>
+                            Proven ability to lead complex clinical teams, manage financial budgets, and implement rigorous Quality Assurance protocols (Six Sigma).
+                        </p>
+                        <div class="data-row">
+                            <div class="data-block">
+                                <span class="label">EDUCATION:</span>
+                                <span class="val">MSc IT MGMT (2025)</span>
+                                <span class="val">BA COMP SCI (2019)</span>
+                            </div>
+                            <div class="data-block">
+                                <span class="label">LOCATION:</span>
+                                <span class="val">ABERCYNON, UK</span>
+                                <span class="val status-green">RELOCATABLE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="history">
+            <div class="section-header">
+                <h2>// MISSION_TIMELINE</h2>
+                <div class="decoder-line"></div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content" data-tilt>
+                        <span class="date">OCT 2024 - PRESENT</span>
+                        <h3 data-value="CARE_MANAGER">CARE_MANAGER</h3>
+                        <h4>Kujali Care Ltd, Bristol</h4>
+                        <p>Commanding clinical operations for complex needs (Epilepsy, Dystonia). Managing HR leadership, financial audits, and stakeholder relations.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content" data-tilt>
+                        <span class="date">AUG 2017 - MAY 2023</span>
+                        <h3 data-value="QA_SPECIALIST">QA_SPECIALIST</h3>
+                        <h4>Kirtan Technology</h4>
+                        <p>Executed Acceptance Sampling and Control Charts. Collaborated on Lean Six Sigma projects to minimize protocol defects.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content" data-tilt>
+                        <span class="date">EDUCATION_ARC</span>
+                        <h3 data-value="ACADEMIC_TRAINING">ACADEMIC_TRAINING</h3>
+                        <h4>Cardiff Met & APJ Abdul Kalam Uni</h4>
+                        <p>Completed BA in Computer Science. Currently finalizing MSc in Information Technology Management.</p>
                     </div>
                 </div>
             </div>
@@ -93,7 +139,7 @@
 
         <section id="projects">
             <div class="section-header">
-                <h2>// MISSION_LOGS</h2>
+                <h2>// PROJECT_LOGS</h2>
                 <div class="decoder-line"></div>
             </div>
 
@@ -114,7 +160,7 @@
                     <div class="corner b-l"></div><div class="corner b-r"></div>
                     <i class="fas fa-shield-alt card-icon"></i>
                     <h3 data-value="QA_PROTOCOL">QA_PROTOCOL</h3>
-                    <p>Deployed Six Sigma methodology at Kirtan Tech. Result: 99.9% protocol adherence and defect reduction.</p>
+                    <p>Deployed Six Sigma methodology at Kirtan Tech. Result: 99.9% protocol adherence and defect reduction via control charts.</p>
                     <div class="tech-bar">
                         <span>SIX_SIGMA</span><span>AUDIT</span>
                     </div>
@@ -138,13 +184,30 @@
                 <h2>// ABILITY_MATRIX</h2>
                 <div class="decoder-line"></div>
             </div>
-            <div class="hex-grid">
-                <div class="hex-item"><span>OPS_MGMT</span></div>
-                <div class="hex-item"><span>FINANCE</span></div>
-                <div class="hex-item"><span>TEAM_LEAD</span></div>
-                <div class="hex-item active"><span>IT_STRATEGY</span></div>
-                <div class="hex-item"><span>QA_TESTING</span></div>
-                <div class="hex-item"><span>COMPLIANCE</span></div>
+            
+            <div class="split-layout">
+                <div class="hex-grid">
+                    <div class="hex-item"><span>OPS_MGMT</span></div>
+                    <div class="hex-item"><span>FINANCE</span></div>
+                    <div class="hex-item"><span>TEAM_LEAD</span></div>
+                    <div class="hex-item active"><span>IT_STRATEGY</span></div>
+                    <div class="hex-item"><span>QA_TESTING</span></div>
+                    <div class="hex-item"><span>COMPLIANCE</span></div>
+                    <div class="hex-item"><span>SALES</span></div>
+                    <div class="hex-item"><span>CRM_TOOLS</span></div>
+                    <div class="hex-item"><span>AUDITING</span></div>
+                </div>
+
+                <div class="certs-panel">
+                    <h3>// CREDENTIALS</h3>
+                    <ul class="cert-list">
+                        <li><i class="fas fa-check-circle"></i> INFECTION CONTROL (L2)</li>
+                        <li><i class="fas fa-check-circle"></i> FIRST AID & FIRE SAFETY</li>
+                        <li><i class="fas fa-check-circle"></i> MEDICATION MGMT</li>
+                        <li><i class="fas fa-check-circle"></i> FULL DRIVING LICENSE</li>
+                        <li><i class="fas fa-check-circle"></i> CLINICAL OBSERVATIONS</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
@@ -181,7 +244,7 @@
     </main>
 
     <footer>
-        [cite_start]<p>SYSTEM_ID: PAURAV_JOSHI // [cite: 1] // END_OF_LINE</p>
+        <p>SYSTEM_ID: PAURAV_JOSHI // END_OF_LINE</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
