@@ -3,174 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paurav Joshi | IT & Operations Management</title>
+    <title>PAURAV JOSHI | QUANTUM TERMINAL</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Teko:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="cursor"></div>
-    <div class="cursor2"></div>
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="scanner"></div>
+            <p>INITIALIZING QUANTUM CORE...</p>
+            <div class="loading-bar"><div class="progress"></div></div>
+        </div>
+    </div>
 
     <div id="particles-js"></div>
+    <div class="grid-floor"></div>
 
-    <div id="overlay"></div>
-
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="logo">Paurav<span class="dot">.</span></a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">History</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <div class="hud-frame">
+        <div class="top-bar">
+            <div class="status">SYS: ONLINE</div>
+            <div class="time" id="clock">00:00:00</div>
         </div>
+        <div class="side-bar left"></div>
+        <div class="side-bar right"></div>
+    </div>
+
+    <nav class="orbital-nav">
+        <a href="#hero" class="orbit-btn" data-tooltip="CORE"><i class="fas fa-atom"></i></a>
+        <a href="#about" class="orbit-btn" data-tooltip="DATA"><i class="fas fa-user-astronaut"></i></a>
+        <a href="#projects" class="orbit-btn" data-tooltip="LOGS"><i class="fas fa-project-diagram"></i></a>
+        <a href="#contact" class="orbit-btn" data-tooltip="LINK"><i class="fas fa-satellite-dish"></i></a>
     </nav>
 
-    <header class="hero">
-        <div class="container">
-            <h1>Paurav Joshi</h1>
-            <p class="subtitle" id="typing-text"></p> 
-            <p class="location"><i class="fas fa-map-marker-alt"></i> Abercynon | Open to Relocation</p>
-            <div class="hero-btns">
-                <a href="#contact" class="btn">Let's Talk</a>
-                <a href="cv.pdf" download class="btn btn-secondary">Download CV <i class="fas fa-download"></i></a>
-            </div>
-        </div>
-    </header>
-
-    <section id="about" class="container section hidden">
-        <h2>The Intersection of Care & Tech</h2>
-        <div class="about-content glass-panel" data-tilt data-tilt-max="5">
-            <p>
-                I don't just manage systems; I manage the <b>people</b> and <b>processes</b> that rely on them. 
-            </p>
-            <br>
-            <p>
-                With a background leading complex clinical operations at <b>Kujali Care</b> and a Master's in <b>IT Management</b>, I specialize in bridging the gap between operational needs and technical solutions. I bring the empathy required for team leadership and the precision required for Quality Assurance and Compliance.
-            </p>
-        </div>
-    </section>
-
-    <section id="projects" class="container section hidden">
-        <h2>Key Projects & Case Studies</h2>
-        <div class="project-grid">
-            <div class="card" data-tilt data-tilt-scale="1.02">
-                <div class="card-content">
-                    <div class="card-header">
-                        <i class="fas fa-database icon-large"></i>
-                        <h3>Healthcare Process Optimization</h3>
-                    </div>
-                    <p>Analyzed clinical workflows to reduce redundancy. Applied IT management principles to streamline patient data handling and compliance reporting.</p>
-                    <div class="tags">
-                        <span>Process Analysis</span>
-                        <span>Compliance</span>
-                        <span>Operations</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" data-tilt data-tilt-scale="1.02">
-                <div class="card-content">
-                    <div class="card-header">
-                        <i class="fas fa-chart-line icon-large"></i>
-                        <h3>Quality Assurance Protocol</h3>
-                    </div>
-                    <p>Developed rigorous acceptance sampling and control charts during my time at Kirtan Technology, reducing defect rates and improving protocol adherence.</p>
-                    <div class="tags">
-                        <span>Six Sigma</span>
-                        <span>QA</span>
-                        <span>Data Analysis</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" data-tilt data-tilt-scale="1.02">
-                <div class="card-content">
-                    <div class="card-header">
-                        <i class="fas fa-network-wired icon-large"></i>
-                        <h3>IT Strategic Planning (MSc)</h3>
-                    </div>
-                    <p>Academic focus on aligning IT infrastructure with business goals. Specialized in Digital Transformation strategies for legacy operational environments.</p>
-                    <div class="tags">
-                        <span>Strategic Planning</span>
-                        <span>Digital Transformation</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="container section hidden">
-        <h2>Professional History</h2>
-        <p style="text-align:center; color: #a0a0a0; margin-bottom: 20px;">(Click cards to view details)</p>
-        <div class="project-grid">
-            <div class="card glass-minimal">
-                <h3>Care Manager</h3>
-                <span class="date">Oct 2024 - Present | Kujali Care Ltd</span>
-                <p>Leading operations, HR leadership, and financial management for complex clinical support teams.</p>
-            </div>
-            <div class="card glass-minimal">
-                <h3>Quality Assurance Specialist</h3>
-                <span class="date">Aug 2017 - May 2023 | Kirtan Technology</span>
-                <p>Focused on Quality Control, Lean Six Sigma collaboration, and protocol optimization.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="container section hidden">
-        <h2>Core Competencies</h2>
-        <div class="skills-wrapper">
-            <div class="skill-category glass-panel" data-tilt data-tilt-max="5">
-                <h3><i class="fas fa-briefcase"></i> Management</h3>
-                <ul class="skills-list">
-                    <li>Operations Management</li>
-                    <li>Financial Budgeting</li>
-                    <li>HR & Team Leadership</li>
-                    <li>Stakeholder Management</li>
-                </ul>
-            </div>
-            <div class="skill-category glass-panel" data-tilt data-tilt-max="5">
-                <h3><i class="fas fa-laptop-code"></i> Technical & QA</h3>
-                <ul class="skills-list">
-                    <li>IT Project Management</li>
-                    <li>Quality Assurance (QA)</li>
-                    <li>Lean Six Sigma</li>
-                    <li>Compliance Auditing</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="container section hidden">
-        <h2>Let's Discuss Your Team's Needs</h2>
-        <p>I am available for interviews to discuss how my unique blend of Operations and IT background can add value to your organization.</p>
+    <main>
         
-        <div class="contact-box glass-panel">
-            <div class="contact-details">
-                <a href="mailto:Infopaurav@gmail.com" class="contact-link">
-                    <i class="fas fa-envelope"></i> Infopaurav@gmail.com
-                </a>
-                <a href="tel:+447369293717" class="contact-link">
-                    <i class="fas fa-phone"></i> +44 7369 293717
-                </a>
-                <a href="https://www.linkedin.com/in/paurav-joshi-b9a334260" target="_blank" class="contact-link social-highlight">
-                    <i class="fab fa-linkedin"></i> Connect on LinkedIn
-                </a>
+        <section id="hero">
+            <div class="hero-content">
+                <div class="glitch-wrapper">
+                    <h1 class="mega-title" data-value="PAURAV JOSHI">PAURAV JOSHI</h1>
+                </div>
+                <div class="role-container">
+                    <div class="line"></div>
+                    <p class="role-text">OPS_COMMANDER // IT_STRATEGIST</p>
+                    <div class="line"></div>
+                </div>
+                <p class="mission-brief">
+                    BRIDGING THE GAP BETWEEN <span class="highlight">CLINICAL OPS</span> AND <span class="highlight">DIGITAL ARCHITECTURE</span>.
+                </p>
+                <div class="action-module">
+                    <a href="#contact" class="cyber-btn">
+                        <span class="btn-content">INITIATE_UPLINK</span>
+                        <span class="glitch-effect"></span>
+                    </a>
+                    <a href="cv.pdf" download class="cyber-btn holo">
+                        <span class="btn-content">DOWNLOAD_INTEL</span>
+                    </a>
+                </div>
+            </div>
+            <div class="reactor-core">
+                <div class="ring r1"></div>
+                <div class="ring r2"></div>
+                <div class="ring r3"></div>
+                <div class="core-orb"></div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="section-header">
+                <h2>// OPERATOR_PROFILE</h2>
+                <div class="decoder-line"></div>
+            </div>
+            
+            <div class="profile-grid">
+                <div class="hex-frame" data-tilt>
+                    <div class="hex-content">
+                        <h3>LEVEL 7 CLEARANCE</h3>
+                        <p>Currently executing Master's protocols in <b>IT Management</b> while commanding operations at <b>Kujali Care</b>. I specialize in deploying high-level compliance strategies and optimizing human-digital interfaces.</p>
+                        <ul class="stats-list">
+                            <li><span>INTEL:</span> BSc Comp Sci + MSc IT</li>
+                            <li><span>STATUS:</span> Relocatable</li>
+                            <li><span>BASE:</span> Abercynon, UK</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="section-header">
+                <h2>// MISSION_LOGS</h2>
+                <div class="decoder-line"></div>
             </div>
 
-            <div class="divider"></div>
+            <div class="cards-container">
+                <div class="holo-card" data-tilt>
+                    <div class="corner t-l"></div><div class="corner t-r"></div>
+                    <div class="corner b-l"></div><div class="corner b-r"></div>
+                    <i class="fas fa-database card-icon"></i>
+                    <h3 data-value="OPTIMIZATION">OPTIMIZATION</h3>
+                    <p>Refactored clinical workflows. Reduced data latency and maximized compliance output through strategic algorithm implementation.</p>
+                    <div class="tech-bar">
+                        <span>DATA</span><span>OPS</span>
+                    </div>
+                </div>
 
-            <div class="qr-container">
-                <img src="whatsapp.jpg" alt="WhatsApp QR Code" class="qr-img">
-                <p class="qr-text">Scan to Chat on WhatsApp</p>
+                <div class="holo-card" data-tilt>
+                    <div class="corner t-l"></div><div class="corner t-r"></div>
+                    <div class="corner b-l"></div><div class="corner b-r"></div>
+                    <i class="fas fa-shield-alt card-icon"></i>
+                    <h3 data-value="QA_PROTOCOL">QA_PROTOCOL</h3>
+                    <p>Deployed Six Sigma methodology at Kirtan Tech. Result: 99.9% protocol adherence and defect reduction.</p>
+                    <div class="tech-bar">
+                        <span>SIX_SIGMA</span><span>AUDIT</span>
+                    </div>
+                </div>
+
+                <div class="holo-card" data-tilt>
+                    <div class="corner t-l"></div><div class="corner t-r"></div>
+                    <div class="corner b-l"></div><div class="corner b-r"></div>
+                    <i class="fas fa-network-wired card-icon"></i>
+                    <h3 data-value="STRATEGY_MSc">STRATEGY_MSc</h3>
+                    <p>Digital Transformation research. Aligning legacy operational infrastructure with modern cloud-based objectives.</p>
+                    <div class="tech-bar">
+                        <span>CLOUD</span><span>MGMT</span>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section id="skills">
+            <div class="section-header">
+                <h2>// ABILITY_MATRIX</h2>
+                <div class="decoder-line"></div>
+            </div>
+            <div class="hex-grid">
+                <div class="hex-item"><span>OPS_MGMT</span></div>
+                <div class="hex-item"><span>FINANCE</span></div>
+                <div class="hex-item"><span>TEAM_LEAD</span></div>
+                <div class="hex-item active"><span>IT_STRATEGY</span></div>
+                <div class="hex-item"><span>QA_TESTING</span></div>
+                <div class="hex-item"><span>COMPLIANCE</span></div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="section-header">
+                <h2>// ESTABLISH_UPLINK</h2>
+                <div class="decoder-line"></div>
+            </div>
+            
+            <div class="comms-panel">
+                <div class="panel-glass">
+                    <div class="comms-header">SECURE CHANNEL READY</div>
+                    <div class="comms-body">
+                        <a href="mailto:Infopaurav@gmail.com" class="comms-link">
+                            <i class="fas fa-envelope-open-text"></i> Infopaurav@gmail.com
+                        </a>
+                        <a href="tel:+447369293717" class="comms-link">
+                            <i class="fas fa-phone-alt"></i> +44 7369 293717
+                        </a>
+                        <a href="https://www.linkedin.com/in/paurav-joshi-b9a334260" target="_blank" class="comms-link linkedin">
+                            <i class="fab fa-linkedin"></i> LINKEDIN_NODE
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="qr-panel">
+                    <div class="scanner-line"></div>
+                    <img src="whatsapp.jpg" alt="WhatsApp QR" class="qr-code">
+                    <div class="qr-label">SCAN_FOR_WHATSAPP</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <footer>
-        <p>Copyright © 2025 Paurav Joshi</p>
+        [cite_start]<p>SYSTEM_ID: PAURAV_JOSHI // [cite: 1] // END_OF_LINE</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
