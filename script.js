@@ -1,80 +1,42 @@
-/* --- QUANTUM ENGINE BOOT --- */
+// 1. Navbar Scroll Effect
+const navbar = document.getElementById('navbar');
+let lastScroll = 0;
 
-// 1. PRELOADER FADE OUT
-window.addEventListener('load', () => {
-    const preloader = document.getElementById('preloader');
-    setTimeout(() => {
-        preloader.style.opacity = '0';
-        setTimeout(() => {
-            preloader.style.display = 'none';
-        }, 1000);
-    }, 2000); 
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    if (currentScroll <= 0) {
+        navbar.style.boxShadow = "none";
+    } else {
+        navbar.style.boxShadow = "0 10px 30px -10px rgba(2,12,27,0.7)";
+    }
+    lastScroll = currentScroll;
 });
 
-// 2. REAL-TIME CLOCK
-function updateClock() {
-    const now = new Date();
-    document.getElementById('clock').innerText = now.toLocaleTimeString();
-}
-setInterval(updateClock, 1000);
+// 2. Smooth Scroll Reveal Animation
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+};
 
-// 3. TEXT DECIPHER EFFECT
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-document.querySelectorAll("h1, h2, h3").forEach(header => {
-    header.onmouseover = event => {
-        let iterations = 0;
-        const interval = setInterval(() => {
-            event.target.innerText = event.target.innerText
-                .split("")
-                .map((letter, index) => {
-                    if(index < iterations) {
-                        return event.target.dataset.value[index];
-                    }
-                    return letters[Math.floor(Math.random() * 36)];
-                })
-                .join("");
-            if(iterations >= event.target.dataset.value.length){
-                clearInterval(interval);
-            }
-            iterations += 1 / 3;
-        }, 30);
-    }
-});
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // Only animate once
+        }
+    });
+}, observerOptions);
 
-// 4. PARTICLES JS
-particlesJS("particles-js", {
-  "particles": {
-    "number": { "value": 100, "density": { "enable": true, "value_area": 800 } },
-    "color": { "value": "#ffffff" },
-    "shape": { "type": "circle" },
-    "opacity": { "value": 1, "random": true },
-    "size": { "value": 2, "random": true },
-    "line_linked": { "enable": false }, 
-    "move": { 
-        "enable": true, 
-        "speed": 10, 
-        "direction": "bottom", 
-        "random": false, 
-        "straight": false, 
-        "out_mode": "out", 
-        "bounce": false 
-    }
-  },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": { "enable": false },
-      "onclick": { "enable": false },
-      "resize": true
-    }
-  },
-  "retina_detect": true
-});
+const elements = document.querySelectorAll('.fade-in, .fade-up');
+elements.forEach(el => observer.observe(el));
 
-// 5. 3D TILT
-VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
-    max: 15,
-    speed: 400,
-    glare: true,
-    "max-glare": 0.5
+// 3. Smooth Scroll for Anchor Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
